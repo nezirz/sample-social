@@ -1,0 +1,16 @@
+<%= form_for(@user) do |f| %>
+  <%= render 'layouts/error_messages',object: @user %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: " Enter your name ", class: 'form-control'  %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, placeholder: " Enter your email ", class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: "Enter your password", class: 'form-control', require:true  %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, placeholder: " Please confirm your password", class: 'form-control', require:true  %>
+
+  <%= f.submit "Create my account", class: "btn btn-primary"%>
+<%end%>

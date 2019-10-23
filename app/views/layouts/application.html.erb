@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BRS</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+ <%= render 'layouts/header' %>
   <body>
-    <%= yield %>
+  <%=render 'layouts/navigation'%>
+
+    <!--Main content-->
+    <main class="container" style="min-height: 500px;">
+      <%= yield %>
+    </main>
+   <%= render 'layouts/footer' %>
   </body>
 </html>

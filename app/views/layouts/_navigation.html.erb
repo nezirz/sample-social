@@ -1,0 +1,32 @@
+<!--Navigation Bar-->
+<nav class="navbar navbar-light bg-light d-flex">
+  <div class="container">
+    <div class="logo">
+      <a class="navbar-brand" href="/#root">
+      <i class="fa fa-camera-retro" aria-hidden="true"></i>
+        Filmy
+      </a>
+    </div>
+    <div class="m-auto">
+      <form class="form-inline search-form">
+        <input class="form-control mr-sm-2" type="search" placeholder="@search" aria-label="Search">
+      </form>
+    </div>
+
+    <div class="user-section">
+      <a><i class="fa fa-compass" ></i></a>
+      <a><i class="fa fa-heart"></i></a>
+      <% if logged_in? %>
+
+      <a class="navbar-brand" href="<%= user_path(current_user)%>">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      </a>
+
+      <% else %>
+        <a class="navbar-brand" href="/sessions/new">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      </a>
+      <% end %>
+    </div>
+  </div>
+</nav>
