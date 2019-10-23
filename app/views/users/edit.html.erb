@@ -1,0 +1,23 @@
+<div class="user-edit-page">
+  <div class="actions">
+    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" data-toggle="pill" href="#v-pills-home" role="tab" aria-selected="true">Edit Profile</a>
+      <a class="nav-link" data-toggle="pill">Change Password</a>
+      <a class="nav-link" data-toggle="pill">Authorized Applications</a>
+      <a class="nav-link" data-toggle="pill">Email and SMS</a>
+      <a class="nav-link" data-toggle="pill">Manage Contacts</a>
+      <a class="nav-link" data-toggle="pill">Privacy and Security</a>
+      <a class="nav-link " data-toggle="pill"><%= link_to "Log out", logout_path, method: :delete %> </a>
+    </div>
+  </div>
+  <div class="details tab-content">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+<% provide(:title, "Edit user") %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'editform' %>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
