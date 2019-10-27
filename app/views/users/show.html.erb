@@ -5,7 +5,6 @@
         <img src="/assets/01.jpg">
       </div>
     </div>
-    
     <div class="col-md-8 basic-info">
       <div class="user-wrapper">
         <h2 class="username"><%=@user.name%></h2>
@@ -15,12 +14,9 @@
         </a>
         </a>
       </div>
-      <ul class="posts">
-        <li><span>12</span> posts</li>
-        <li><span>195</span> followers</li>
-        <li><span>345</span> following</li>
-      </ul>
+      <%=render "stats" %>
     </div>
+    <%= render "follow_form" if logged_in? %>
   </div>
 </div>
 <div class="user-tabs">
