@@ -1,0 +1,18 @@
+<div class="posts">
+  <% @posts.each do |post| %>
+    <section class="post">
+  <div class="user">
+    <div class="avatar">
+      <img src="user_avatar.jpg">
+    </div>
+    <div class="name">
+      <%= post.user.name %>
+    </div>
+  </div>
+  <%= image_tag post.image, class: 'main-image' %>
+  <div class="caption">
+    <%= post.caption %>
+  </div>
+</section>
+  <% end %>
+</div>
