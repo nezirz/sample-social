@@ -2,10 +2,17 @@
 <nav class="navbar navbar-light bg-light d-flex">
   <div class="container">
     <div class="logo">
+    <%if logged_in?%>
+      <a class="navbar-brand" href="/index">
+      <i class="fa fa-camera-retro" aria-hidden="true"></i>
+        Filmy
+      </a>
+    <%else%>
       <a class="navbar-brand" href="/#root">
       <i class="fa fa-camera-retro" aria-hidden="true"></i>
         Filmy
       </a>
+    <%end%>
     </div>
     <div class="m-auto">
       <form class="form-inline search-form">
@@ -15,11 +22,15 @@
 
     <div class="user-section">
       <a><i class="fa fa-compass" ></i></a>
-      <a><i class="fa fa-heart"></i></a>
+
       <% if logged_in? %>
 
+      <a class="navbar-brand" href="<%= posts_path%>">
+        <i class="fa fa-upload"></i>
+      </a>
+
       <a class="navbar-brand" href="<%= user_path(current_user)%>">
-      <i class="fa fa-user" aria-hidden="true"></i>
+        <i class="fa fa-user" aria-hidden="true"></i>
       </a>
 
       <% else %>
