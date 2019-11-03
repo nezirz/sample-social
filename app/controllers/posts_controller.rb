@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order(created_at: :desc)
+    @posts = Post.my_and_following_posts(current_user.peoples_i_follow(current_user), current_user)
   end
 
   private
